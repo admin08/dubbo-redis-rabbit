@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: lingfeng
+Built-By: 17608
 Class-Path: . lib/goods-0.0.1-SNAPSHOT.jar lib/entity-0.0.1-SNAPSHOT.j
  ar lib/comment-0.0.1-SNAPSHOT.jar lib/commons-beanutils-1.9.3.jar lib
  /commons-collections-3.2.2.jar lib/spring-core-4.3.10.RELEASE.jar lib
@@ -22,7 +22,7 @@ Class-Path: . lib/goods-0.0.1-SNAPSHOT.jar lib/entity-0.0.1-SNAPSHOT.j
  .Final.jar lib/zkclient-0.1.jar lib/jedis-2.8.1.jar lib/commons-pool2
  -2.4.2.jar lib/spring-data-redis-1.7.2.RELEASE.jar lib/spring-data-ke
  yvalue-1.1.2.RELEASE.jar
-Build-Jdk: 1.8.0_151
+Build-Jdk: 1.8.0_144
 Created-By: Maven Integration for Eclipse
 Main-Class: com.alibaba.dubbo.container.Main
 

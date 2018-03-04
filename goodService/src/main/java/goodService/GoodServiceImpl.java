@@ -40,12 +40,12 @@ public class GoodServiceImpl implements GoodService {
 
 	public int addGoods(Goods goods) {
 		return mongoTemplate.execute(new DbCallback<Integer>() {
-			@Override
+
 			public Integer doInDB(DB arg0) throws MongoException, DataAccessException {
 				DBObject student = new BasicDBObject();
 				try {
 					arg0.getCollection("table").insert(MyBeanUtis.bean2DBObject(student));
-				} catch (IllegalArgumentException | IllegalAccessException e) {
+				} catch ( IllegalAccessException e) {
 					e.printStackTrace();
 				}
 				return 1;
@@ -53,10 +53,10 @@ public class GoodServiceImpl implements GoodService {
 		});
 	}
 
-	@Override
-	public int deleteGoods(String Id) {
+	
+	public int deleteGoods(final String Id) {
 		return mongoTemplate.execute(new DbCallback<Integer>() {
-			@Override
+		
 			public Integer doInDB(DB arg0) throws MongoException, DataAccessException {
 				DBObject student = new BasicDBObject();
 				student.put("id", Id);
@@ -66,10 +66,10 @@ public class GoodServiceImpl implements GoodService {
 		});
 	}
 
-	@Override
-	public int deleteGoodsByName(String name) {
+	 
+	public int deleteGoodsByName(final String name) {
 		return mongoTemplate.execute(new DbCallback<Integer>() {
-			@Override
+			 
 			public Integer doInDB(DB arg0) throws MongoException, DataAccessException {
 				DBObject student = new BasicDBObject();
 				student.put("name", name);
