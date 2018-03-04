@@ -6,7 +6,7 @@ public class Tess {
 	
 	public static void main(String[] args) {
 		
-		ApplicationContext app = new 
+		//ApplicationContext app = new 
 		
 		
 	}

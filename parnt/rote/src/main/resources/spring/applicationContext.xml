@@ -20,14 +20,18 @@
         http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-	<context:component-scan base-package="goodService">
+	<context:component-scan base-package="com.xlf.web">
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
-	<context:annotation-config />
-	<dubbo:application name="demo-consumer" />
-	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" />
-	<dubbo:reference interface="com.xlf.goods.GoodService" />
-
+ 		
+ 		
+ 		 
+     <context:annotation-config />
+     <dubbo:application name="demo-consumer"/>
+     <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"  />
+     <dubbo:reference interface="com.xlf.goods.GoodService"  id="goodServer"   />
+     
+     
 
 </beans>

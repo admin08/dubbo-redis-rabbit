@@ -14,6 +14,14 @@ public interface GoodService {
 		
 	public Goods showGoodsByDes();
 	
+	public int addGoods(Goods goods);
+	
+	
+	public int deleteGoods(String Id);
+	
+	
+	public int deleteGoodsByName(String name);
+	
 	
 	
 	

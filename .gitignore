@@ -1,0 +1,22 @@
+﻿# 忽略myeclipse工程文件
+.settings
+.classpath
+.project
+.mymetadata
+# 忽略target目录
+target
+#其他忽略文件
+.myumldata
+src/main/webapp/META-INF
+#忽略classes文件
+src/main/webapp/WEB-INF/classes
+src/main/webapp/WEB-INF/content
+#忽略META-INF文件夹 add by ouyang 2015-02-03
+src/main/java/META-INF
+#idea file
+.idea
+zxy-student.iml
+/bin
+/src/main/resources/rebel.xml
+/.springBeans
+.DS_Store
