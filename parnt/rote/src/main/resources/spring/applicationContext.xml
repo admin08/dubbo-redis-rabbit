@@ -20,9 +20,9 @@
         http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-	<!-- <context:component-scan base-package="com.xlf.web">
+ <context:component-scan base-package="com.xlf.web"/>
 	
-	</context:component-scan> -->
+
  		
  		
  		 
@@ -30,7 +30,7 @@
      <dubbo:application name="demo-consumer"/>
      <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"  />
      <dubbo:reference interface="com.xlf.goods.GoodTypeService"  id="goodServerType"  check="false"  />
-     <dubbo:reference interface="com.xlf.goods.GoodTypeService"  id="goodServer"  check="false"  />
+     <dubbo:reference interface="com.xlf.goods.GoodService"  id="demoService"  check="false"  />
      
 
 </beans>

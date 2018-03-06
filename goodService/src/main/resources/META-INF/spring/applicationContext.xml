@@ -26,22 +26,22 @@
 
 
 	<context:annotation-config />
-	
+
 	<!-- 服务 -->
 	<dubbo:application name="demo-consumer" />
 	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" />
-	<dubbo:service interface="com.xlf.goods.GoodService" ref="demoService" mock="true" />
-	<dubbo:service interface="com.xlf.goods.GoodService" ref="demoService" mock="true"  />
-	
+	<dubbo:service interface="com.xlf.goods.GoodService"      ref="demoService"  />
+	<dubbo:service interface="com.xlf.goods.GoodTypeService"	ref="demoServiceType"    />
 
 
 
 
 
-<!-- dao -->
+
+	<!-- dao -->
 
 
-<!--连接池配置 -->
+	<!--连接池配置 -->
 
 	<mongo:mongo-client host="114.55.90.171" port="27017">
 		<mongo:client-options connections-per-host="20"
@@ -58,23 +58,20 @@
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
 	</bean>
 
-
-
-
-<!-- redis -->
+	<!-- redis -->
 	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
-		<property name="maxTotal" value="${redis.maxActive}" />
-		<property name="maxIdle" value="${redis.maxIdle}" />
-		<property name="maxWaitMillis" value="${redis.maxWaitMillis}" />
+		<property name="maxTotal" value="10" />
+		<property name="maxIdle" value="10" />
+		<property name="maxWaitMillis" value="10000" />
 		<property name="testOnBorrow" value="true" />
 	</bean>
 
 	<!-- redis单节点数据库连接配置 -->
 	<bean id="jedisConnectionFactory"
 		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
-		<property name="hostName" value="${redis.host}" />
-		<property name="port" value="${redis.port}" />
-		<property name="password" value="${redis.password}" />
+		<property name="hostName" value="120.79.37.111" />
+		<property name="port" value="6379" />
+		<property name="password" value="Admin123" />
 		<property name="poolConfig" ref="jedisPoolConfig" />
 	</bean>
 
